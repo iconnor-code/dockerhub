@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./ingress-nginx/controller/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ingress-nginx/controller:v1.7.0
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ingress-nginx-controller:v1.7.0

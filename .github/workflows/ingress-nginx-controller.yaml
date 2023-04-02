@@ -1,4 +1,4 @@
-name: ci
+name: Build ingress-nginx controller Image
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: .
+          context: ./ingress-nginx/controller
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ingress-nginx/controller:latest

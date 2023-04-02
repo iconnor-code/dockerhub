@@ -25,7 +25,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: ./ingress-nginx/controller
-          file: ./Dockerfile
+          context: .
+          file: ./ingress-nginx/controller/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/ingress-nginx/controller:latest
